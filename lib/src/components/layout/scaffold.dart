@@ -16,6 +16,7 @@ class Scaffold extends StatefulWidget {
   final Color? footerBackgroundColor;
   final Color? backgroundColor;
   final bool showLoadingSparks;
+  final bool resizeToAvoidBottomInset;
 
   const Scaffold({
     super.key,
@@ -30,6 +31,7 @@ class Scaffold extends StatefulWidget {
     this.headerBackgroundColor,
     this.footerBackgroundColor,
     this.showLoadingSparks = false,
+    this.resizeToAvoidBottomInset=true,
   });
 
   @override
@@ -157,7 +159,7 @@ class ScaffoldState extends State<Scaffold> {
           children: [
             buildHeader(context),
             Container(
-              padding: viewInsets,
+              padding: widget.resizeToAvoidBottomInset? viewInsets:null,
               child: ToastLayer(child: widget.child),
             ),
             buildFooter(context, viewInsets),
