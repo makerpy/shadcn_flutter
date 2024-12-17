@@ -31,7 +31,7 @@ class Scaffold extends StatefulWidget {
     this.headerBackgroundColor,
     this.footerBackgroundColor,
     this.showLoadingSparks = false,
-    this.resizeToAvoidBottomInset = true;
+    this.resizeToAvoidBottomInset = true,
   });
 
   @override
