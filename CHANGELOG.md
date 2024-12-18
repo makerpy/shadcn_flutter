@@ -1,3 +1,7 @@
+## 0.0.24
+* Remove pixel_snap
+* Fixed flutter dependency version constraint
+
 ## 0.0.23
 * Support for 3.27.0
 * Added Sortable component
